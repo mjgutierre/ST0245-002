@@ -46,4 +46,21 @@ public boolean splitOdd10Aux(int start, int[] nums, int mult, int odd) {
         return true;            
     return false;
 }
+ public boolean split53(int[] nums) { 
+        return splitAux(nums, 0, 0,0); 
+    }  
+
+    public boolean splitAyu(int[] nums, int prefix, int sum1, int sum2){ 
+        if(prefix==nums.length)
+         return sum1==sum2; 
+        if(nums[prefix] % 5 == 0){ 
+            return splitAyu(nums, prefix+1, sum1, sum2+nums[prefix]); 
+        }else if(nums[prefix] % 3 == 0){ 
+            return splitAyu(nums, prefix+1, sum1+nums[prefix], sum2); 
+        }else{ 
+            return splityu(nums, prefix+1, sum1, sum2+nums[prefix])|| 
+            splitAux(nums, prefix+1, sum1+nums[prefix], sum2); 
+        } 
+    } 
+
 }
