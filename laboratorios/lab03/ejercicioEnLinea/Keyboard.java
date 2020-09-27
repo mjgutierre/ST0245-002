@@ -11,7 +11,7 @@ public class Keyboard {
         LinkedList<String> list = new LinkedList<>();
         boolean Final = true;
         int k = 0;
-        for (int i = 0; i < b.length(); i++) {
+        for (int i = 0; i < b.length(); i++) {   //O(n)
             if (b.charAt(i) == '[') {
                 if (Final) {
                     list.addLast(b.substring(k,i));
@@ -39,7 +39,7 @@ public class Keyboard {
             list.addFirst(b.substring(k));
         }
          String result= "";
-        for (String a: list) {
+        for (String a: list) {        //O(n)
             result+= a;
         }
           return result;
