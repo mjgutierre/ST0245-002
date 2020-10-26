@@ -36,7 +36,7 @@ public class Punto2
         if(node != null) {                 //c1
             System.out.println(node.data); //c2
             preOrder(node.left);           //c3*(n/2)
-            preOrder(node.left);           //c4*(n/2)
+            preOrder(node.right);           //c4*(n/2)
         }
      }
     public void posOrder(Node node) {
